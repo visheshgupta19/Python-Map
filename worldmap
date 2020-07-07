@@ -22,16 +22,7 @@ fig.update_layout(
         showframe=False,
         showcoastlines=False,
         projection_type='equirectangular'
-    ),
-    annotations = [dict(
-        x=0.55,
-        y=0.1,
-        xref='paper',
-        yref='paper',
-        text='Source: <a href="https://www.cia.gov/library/publications/the-world-factbook/fields/2195.html">\
-            CIA World Factbook</a>',
-        showarrow = False
-    )]
+    )
 )
 
 fig.show()
