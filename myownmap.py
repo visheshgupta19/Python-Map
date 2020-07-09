@@ -18,27 +18,27 @@ app.layout = html.Div([
 
     dcc.Dropdown(id="slct_year",
                  options=[
-                     {"label": "2001", "Time": 2001},
-                     {"label": "2002", "Time": 2002},
-                     {"label": "2003", "Time": 2003},
-                     {"label": "2004", "Time": 2004},
-                     {"label": "2005", "Time": 2005},
-                     {"label": "2006", "Time": 2006},
-                     {"label": "2007", "Time": 2007},
-                     {"label": "2008", "Time": 2008},
-                     {"label": "2009", "Time": 2009},
-                     {"label": "2010", "Time": 2010},
-                     {"label": "2011", "Time": 2011},
-                     {"label": "2012", "Time": 2012},
-                     {"label": "2013", "Time": 2013},
-                     {"label": "2014", "Time": 2014},
-                     {"label": "2015", "Time": 2015},
-                     {"label": "2016", "Time": 2016},
-                     {"label": "2017", "Time": 2017},
-                     {"label": "2018", "Time": 2018},
-                     {"label": "2019", "Time": 2019}],
+                     {"label": "2001", "value": 2001},
+                     {"label": "2002", "value": 2002},
+                     {"label": "2003", "value": 2003},
+                     {"label": "2004", "value": 2004},
+                     {"label": "2005", "value": 2005},
+                     {"label": "2006", "value": 2006},
+                     {"label": "2007", "value": 2007},
+                     {"label": "2008", "value": 2008},
+                     {"label": "2009", "value": 2009},
+                     {"label": "2010", "value": 2010},
+                     {"label": "2011", "value": 2011},
+                     {"label": "2012", "value": 2012},
+                     {"label": "2013", "value": 2013},
+                     {"label": "2014", "value": 2014},
+                     {"label": "2015", "value": 2015},
+                     {"label": "2016", "value": 2016},
+                     {"label": "2017", "value": 2017},
+                     {"label": "2018", "value": 2018},
+                     {"label": "2019", "value": 2019}],
                  multi=False,
-                 Time=2019,
+                 value=2019,
                  style={'width': "40%"}
                  ),
 
@@ -53,7 +53,7 @@ app.layout = html.Div([
 @app.callback(
     [Output(component_id='output_container', component_property='children'),
      Output(component_id='my_world_map', component_property='figure')],
-    [Input(component_id='slct_year', component_property='Time')]
+    [Input(component_id='slct_year', component_property='value')]
 )
 def update_graph(option_slctd):
     print(option_slctd)
