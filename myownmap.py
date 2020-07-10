@@ -59,7 +59,7 @@ def update_graph(option_slctd):
     print(option_slctd)
     print(type(option_slctd))
 
-    container = "The year chosen by user was: {}".format(option_slctd)
+    #container = "The year chosen by user was: {}".format(option_slctd)
 
     dff = df.copy()
     dff = dff[dff["Time"] == option_slctd]
@@ -75,8 +75,9 @@ def update_graph(option_slctd):
     #hover_data=df['Location','PopTotal']
     marker_line_width=0.5,
     colorbar_title = 'Population',
-    ])
+    )]
     )
+    container = "The year chosen by user was: {}".format(option_slctd)
     return container, fig
      
 if __name__ == '__main__':
