@@ -9,8 +9,8 @@ from dash.dependencies import Input, Output
 app = dash.Dash(__name__)
 
 # Import and clean data (importing csv into pandas)
-df = pd.read_csv("WPP2019_TotalPopulationBySex.csv")
-
+#df = pd.read_csv("WPP2019_TotalPopulationBySex.csv")
+df = pd.read_csv("x.csv")
 # App layout
 app.layout = html.Div([
 
@@ -72,7 +72,7 @@ def update_graph(option_slctd):
     autocolorscale=False,
     reversescale=True,
     marker_line_color='darkgray',
-    hover_data=df['Location','PopTotal']
+    #hover_data=df['Location','PopTotal']
     marker_line_width=0.5,
     colorbar_title = 'Population',
     ])
