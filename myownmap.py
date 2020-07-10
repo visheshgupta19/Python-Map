@@ -59,15 +59,16 @@ def update_graph(option_slctd):
     print(option_slctd)
     print(type(option_slctd))
 
-    #container = "The year chosen by user was: {}".format(option_slctd)
+    
 
     dff = df.copy()
     dff = dff[dff["Time"] == option_slctd]
+    print(dff)
     
     fig = go.Figure(data=[go.Choropleth(
-    locations = df['iso_alpha'],
-    z = df['PopTotal'],
-    text = df['Location'],
+    locations = dff['iso_alpha'],
+    z = dff['PopTotal'],
+    text = dff['Location'],
     colorscale = 'Blues',
     autocolorscale=False,
     reversescale=True,
